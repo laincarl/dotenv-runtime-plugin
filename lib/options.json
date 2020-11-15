@@ -1,0 +1,11 @@
+{
+  "title": "DotEnvRuntimePluginOptions",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "entry": {
+      "description": "entry",
+      "type": "string"
+    }
+  }
+}
