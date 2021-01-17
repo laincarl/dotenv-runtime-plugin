@@ -6,6 +6,10 @@
     "entry": {
       "description": "entry",
       "type": "string"
+    },
+    "variableName": {
+      "description": "variableName",
+      "type": "string"
     }
   }
 }

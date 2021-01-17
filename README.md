@@ -1,24 +1,24 @@
 # dotenv-runtime-plugin
 
-This plugin allow you use dotenv variables in browser runtime.
+一个可以使 dotenv 环境变量热更新的 webpack plugin
 
-## Getting Started
+## 快速开始
 
-To begin, you'll need to install `dotenv-runtime-plugin`:
+先安装 `dotenv-runtime-plugin`:
 
-using yarn
+使用 yarn
 
 ```console
 yarn add dotenv-runtime-plugin
 ```
 
-or using npm
+或者使用 npm
 
 ```console
 npm install dotenv-runtime-plugin --save-dev
 ```
 
-Then add the plugin to your `webpack` config. For example:
+之后修改 `webpack` 配置. 例子:
 
 **webpack.config.js**
 
@@ -29,7 +29,7 @@ module.exports = {
   ...
   plugins: [
     new DotEnvRuntimePlugin({
-      // your dotenv file path
+      // dotenv 文件路径
       entry: './.env'
     }),
   ]
@@ -37,14 +37,20 @@ module.exports = {
 };
 ```
 
-then in runtime, you are able to access variables
+启动 webpack 之后, dotenv 中的环境变量会定义在 window 上，默认变量名`_env_`
 
 ```js
 console.log(window._env_);
 ```
 
-## Options
+## 选项
 
 ### `entry`
 
-Type: `String`
+类型: `String`
+
+### `variableName`
+
+类型: `String`
+
+支持类似`a.b`的形式,例如`process.env`
